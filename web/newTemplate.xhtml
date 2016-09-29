@@ -15,14 +15,56 @@
 
 
         <div id="top" class="top">
-            <ui:insert name="top">Top</ui:insert>
+            <ui:insert name="top">
+                <h2>Welcome to our Site</h2>
+            </ui:insert>
         </div>
         <div>
             <div id="left">
-                <ui:insert name="left">Left</ui:insert>
+                <ui:insert name="left">
+                    <h3>Links</h3>
+                    <ul>
+                        <li>
+                            <h:outputLink value="http://packtpub.com">
+                                          <h:outputText value="Packt Publishing"/>
+                            </h:outputLink>
+                        </li>
+                        <li>
+                            <h:outputLink value="http://ensode.net">
+                                          <h:outputText value="Ensode.net"/>
+                            </h:outputLink>
+                        </li>
+                        <li>
+                            <h:outputLink value="http://ensode.com">
+                                          <h:outputText value="Ensode Technolodgy, LLC"/>
+                            </h:outputLink>
+                        </li>
+                        <li>
+                            <h:outputLink value="http://netbeans.org">
+                                          <h:outputText value="NetBeans.org"/>
+                            </h:outputLink>
+                        </li>
+                        <li>
+                            <h:outputLink value="http://glassfish.org">
+                                          <h:outputText value="GlassFish.org"/>
+                            </h:outputLink>
+                        </li>
+                        <li>
+                            <h:outputLink value="http://java.com">
+                                          <h:outputText value="Java EE"/>
+                            </h:outputLink>
+                        </li>
+                        <li>
+                            <h:outputLink value="http://java.com">
+                                          <h:outputText value="Java"/>
+                            </h:outputLink>
+                        </li>
+                    </ul>
+                </ui:insert>
             </div>
             <div id="content" class="left_content">
-                <ui:insert name="content">Content</ui:insert>
+                <ui:insert name="content">
+                </ui:insert>
             </div>
         </div>
     </h:body>
