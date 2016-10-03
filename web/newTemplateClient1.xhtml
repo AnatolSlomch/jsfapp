@@ -2,19 +2,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
 
     <body>
-
-        <ui:composition template="./newTemplate.xhtml">
+        <f:view contracts="#{themeSelector.themeName}">
+        <ui:composition template="/template.xhtml">
+            <ui:define name="top">
+                <h:form>
+                    <h:outputLabel for="themeSelector" value="Select a theme"/>
+                    <h:selectOneMenu id="themeSelector" value="#{themeSelector.themeName}">
+                        <f:selectItem itemLabel="normal" itemValue="normal"/>
+                        <f:selectItem itemLabel="dark" itemValue="dark"/>
+                    </h:selectOneMenu>
+                    <h:commandButton value="Submit" action="rlcd"/>
+                </h:form>
+            </ui:define>
             <ui:define name="content">
- <p>
-In this main area we would put our main text,
-images, forms, etc. In this example we will simply use the typical
-filler text that web designers love to use.
-</p>
-<p> 
-Lorem ipsum dolor sit amet, consectetur
+                <p>Lorem ipsum dolor sit amet, consectetur
 adipiscing elit. Nunc venenatis, diam nec tempor dapibus, lacus erat
 vehicula mauris, id lacinia nisi arcu vitae purus. Nam vestibulum
 nisi non lacus luctus vel ornare nibh pharetra. Aenean non lorem
@@ -31,9 +36,10 @@ ut convallis. Maecenas blandit, ante eget tempor sollicitudin, ligula
 eros venenatis justo, sed ullamcorper dui leo id nunc. Suspendisse
 potenti. Ut vel mauris sem. Duis lacinia eros laoreet diam cursus nec
 hendrerit tellus pellentesque.
-</p>
+                </p>
             </ui:define>
 
         </ui:composition>
+        </f:view>
     </body>
 </html>
